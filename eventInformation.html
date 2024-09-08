@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Event Information</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="background-wrapper">
+        <div class="gradient-overlay"></div>
+        <div class="spinning-pattern"></div>
+      </div>
+      <div class="nav-header cont event-header">
+        <div>
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </g>
+          </svg>
+        </div>
+        <h1 class="title">سحب معلومات الفعالية</h1>
+        <div onclick="goBack()">
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+
+            <g id="SVGRepo_iconCarrier">
+              <path
+                stroke="#ffffff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11 18h3.75a5.25 5.25 0 100-10.5H5M7.5 4L4 7.5 7.5 11"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+      <div class="content cont">
+        <div class="gr-background">
+          <div class="event-content">
+            <form class="eventForm" action="">
+              <div class="eventNumber">
+                <h2>رقم الفعالية</h2>
+                <input type="number" placeholder="أدخل رقم الفعالية" />
+              </div>
+              <div class="displayOptions">
+                <h2>خيارات العرض</h2>
+                <div class="option">
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    id="option1"
+                    value="1"
+                    name="options"
+                  />
+                  <label for="option1">عرض الزرين</label>
+                </div>
+                <div class="option">
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    id="display-only-the-print-button"
+                  />
+                  <label for="display-only-the-print-button"
+                    >عرض زر الطباعة فقط</label
+                  >
+                </div>
+                <div class="option">
+                  <input
+                    class="custom-radio"
+                    type="radio"
+                    id="display-the-new-registration-button"
+                  />
+                  <label for="display-the-new-registration-button"
+                    >عرض زر التسجيل الجديد</label
+                  >
+                </div>
+              </div>
+              <button class="eventBtn" type="submit">
+                <div>
+                  <svg
+                    width="35px"
+                    height="35px"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
+                        stroke="#ffffff"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 21H9C6.17157 21 4.75736 21 3.87868 20.1213C3 19.2426 3 17.8284 3 15M21 15C21 17.8284 21 19.2426 20.1213 20.1213C19.8215 20.4211 19.4594 20.6186 19 20.7487"
+                        stroke="#ffffff"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </div>
+                <h2>تحميل معلومات الفعالية</h2>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

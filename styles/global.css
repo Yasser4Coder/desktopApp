@@ -1,0 +1,653 @@
+/* Global */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+
+:root {
+  --header-color: rgba(30, 40, 57, 255);
+  --header-text: rgba(235, 236, 239, 255);
+  --global-background-color: rgba(48, 35, 78, 255);
+  --main-text: rgba(253, 247, 241, 255);
+  --global-font: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* container */
+.container {
+  overflow: hidden !important;
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--global-background-color);
+}
+
+.cont {
+  padding: 0px 40px;
+  margin: 0px auto;
+}
+
+.background-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 0;
+}
+
+.gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, #3b82f6, #a855f7, #ec4899);
+  opacity: 0.2;
+}
+
+.spinning-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox=%220 0 80 80%22 width=%2280%22 height=%2280%22%3E%3Ccircle cx=%2240%22 cy=%2240%22 r=%2236%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%221%22 stroke-opacity=%22.1%22%2F%3E%3C%2Fsvg%3E");
+  background-size: 24px 24px;
+  animation: spin 60s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* nav header */
+
+.nav-header {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  z-index: 10;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  background-color: var(--header-color);
+}
+
+.nav-header h1 {
+  color: var(--header-text);
+}
+
+/* event-header */
+
+.event-header {
+  justify-content: space-between !important;
+}
+
+.event-header div {
+  cursor: pointer;
+}
+
+/* main page  */
+
+.content {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  top: 15%;
+  width: 100%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.row-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 150px;
+  cursor: pointer;
+  color: var(--main-text);
+  height: 160px;
+  transition: transform 0.3s ease;
+}
+.button a {
+  font-size: 25px;
+  color: var(--main-text);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button:hover {
+  background-color: #1a1924 !important;
+  transform: scale(1.04);
+}
+
+.button.one {
+  background-color: #059669;
+  transition: transform 0.3s ease;
+}
+.button.tow {
+  background-color: #2563eb;
+  transition: transform 0.3s ease;
+}
+.button.three {
+  background-color: #d97706;
+  transition: transform 0.3s ease;
+}
+.button.for {
+  background-color: #9333ea;
+  transition: transform 0.3s ease;
+}
+
+.logout-button {
+  margin-top: 6%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  background-color: #ef4747;
+  padding: 15px 70px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--main-text);
+  transition: ease 0.6s;
+}
+
+.logout-button:hover {
+  background-color: #a72222;
+}
+
+.logout-button i {
+  font-size: 30px;
+}
+
+/* event information page */
+
+.gr-background {
+  padding: 4px;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  background: rgb(120, 64, 145);
+  background: linear-gradient(
+    3deg,
+    rgba(120, 64, 145, 1) 10%,
+    rgba(187, 144, 215, 1) 41%,
+    rgba(147, 103, 199, 1) 66%,
+    rgba(181, 143, 217, 1) 81%,
+    rgba(144, 197, 215, 1) 100%
+  );
+}
+
+.event-content {
+  background-color: var(--header-color);
+  border-radius: 10px;
+  padding: 40px;
+  color: var(--main-text);
+}
+.eventForm {
+  width: 100%;
+}
+
+.eventNumber {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.eventNumber input {
+  width: 100%;
+  background-color: #374151;
+  border: 1px solid #626b79;
+  border-radius: 10px;
+  padding: 18px 15px;
+  font-size: 18px;
+  color: var(--main-text);
+}
+
+.eventNumber input::placeholder {
+  color: #676873;
+  letter-spacing: 5px;
+}
+
+.eventNumber input:focus {
+  outline: none;
+}
+
+.eventBtn {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 50px;
+  color: var(--main-text);
+  background-color: #1e50da;
+  border: 1px solid transparent;
+  padding: 18px 0px;
+}
+
+.eventBtn i {
+  font-size: 25px;
+}
+
+.displayOptions {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.option {
+  font-size: 18px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1em auto;
+  gap: 1em;
+}
+
+.option + .option {
+  margin-top: 0.5em;
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: transparent;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: black;
+  width: 1.15em;
+  height: 1.15em;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 50ms transform ease-in-out;
+  background-color: transparent;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+  background-color: black; /* Set the inner circle color to black */
+}
+
+/*------------------- inquiry page -------------  */
+.inquiry-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.inquiry-input {
+  width: 100%;
+}
+
+.inquiry-input input {
+  width: 100%;
+  background-color: #374151;
+  border: 1px solid #626b79;
+  border-radius: 10px;
+  padding: 18px 15px;
+  font-size: 18px;
+  color: var(--main-text);
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.inquiry-input input::placeholder {
+  color: gray;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.inquiry-input input:focus {
+  outline: none;
+}
+
+.culc-inputs {
+  width: 100%;
+  max-width: 600px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: auto auto auto;
+}
+
+.culc-inputs .btn {
+  background: #00000079;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+
+.culc-inputs .btn:hover {
+  background-color: #3b346479;
+  transition: ease 0.3s;
+}
+
+.inquiry-button {
+  width: 100%;
+  padding: 13px 0px;
+  border-radius: 10px;
+  border: none;
+  color: var(--main-text);
+  font-family: var(--global-font);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease 0.3s;
+  background-color: rgb(17, 134, 62);
+}
+
+.inquiry-button:hover {
+  background-color: rgb(27, 168, 27);
+  transition: ease 0.3s;
+}
+
+/* ------------------ Scheduled Registration -----------------------  */
+
+.scheduled {
+  background-color: #6b46c1;
+  width: 100%;
+  border-radius: 10px;
+  padding: 30px;
+  color: var(--main-text);
+}
+
+.scheduled-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.scheduled-input input {
+  width: 100%;
+  border-radius: 10px;
+  border: transparent;
+  padding: 15px 15px;
+  text-align: center;
+  font-family: var(--global-font);
+}
+.scheduled-input input:focus {
+  outline: none;
+}
+
+.scheduled-input button {
+  padding: 15px 35px;
+  border-radius: 20px;
+  border: none;
+  transition: ease 0.3s;
+  background-color: rgb(17, 134, 62);
+  color: var(--main-text);
+  font-family: var(--global-font);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.scheduled-input button:hover {
+  background-color: rgb(27, 168, 27);
+  transition: ease 0.3s;
+}
+
+.scheduled .table {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 53vh;
+}
+
+.scheduled .table .row-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background-color: #553c9a;
+  padding: 18px 10px;
+  border-bottom: 1px solid white;
+}
+
+.scheduled .table .row-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 10px;
+  border-bottom: 1px solid white;
+}
+
+.scheduled .table .row-content h5 {
+  text-align: start;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+}
+.scheduled .table .row-header h3 {
+  width: 100%;
+  text-align: start;
+}
+
+/* -------------- Register new Event ---------------- */
+
+.new-event-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.new-event-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.new-event-input textarea {
+  height: 80px;
+  padding: 15px;
+  background-color: #374151;
+  border: 1px solid #626b79;
+  color: var(--main-text);
+  border-radius: 10px;
+  font-family: var(--global-font);
+}
+
+.new-event-input textarea:focus {
+  outline: none;
+}
+
+.double-input {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  align-items: center;
+}
+
+.new-event-button {
+  cursor: pointer;
+  margin-top: 20px;
+  border: transparent;
+  border-radius: 10px;
+  color: var(--main-text);
+  padding: 14px 5px;
+  font-family: var(--global-font);
+  transition: ease 0.3s;
+  background-color: rgb(17, 134, 62);
+}
+
+.new-event-button:hover {
+  background-color: rgb(27, 168, 27);
+  transition: ease 0.3s;
+}
+
+.new-event-form input {
+  padding: 14px;
+  border-radius: 10px;
+  background-color: #374151;
+  border: 1px solid #626b79;
+  color: var(--main-text);
+  font-family: var(--global-font);
+}
+
+.new-event-form input:focus {
+  outline: none;
+}
+
+/* ------------------- Event Page --------------- */
+
+.event-title {
+  letter-spacing: 3px;
+}
+
+.plus {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.self-print {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+.toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+  &:before,
+  &:after {
+    content: "";
+  }
+  &:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+  }
+  .toggle:hover &:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+  .toggle-checkbox:checked + & {
+    background: green;
+    &:before {
+      left: 30px;
+    }
+  }
+}
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.self-print .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.entry-card-print {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  background-color: #054996;
+  width: 100%;
+  border-radius: 10px;
+  padding: 18px 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.new-registration {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  background-color: #059669;
+  width: 100%;
+  border-radius: 10px;
+  padding: 18px 14px;
+  text-align: center;
+  cursor: pointer;
+}
