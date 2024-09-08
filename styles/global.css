@@ -93,10 +93,9 @@ a {
   justify-content: space-between !important;
 }
 
-.event-header div {
+.goback {
   cursor: pointer;
 }
-
 /* main page  */
 
 .content {
