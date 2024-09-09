@@ -13,9 +13,14 @@ body {
 :root {
   --header-color: rgba(30, 40, 57, 255);
   --header-text: rgba(235, 236, 239, 255);
-  --global-background-color: rgba(48, 35, 78, 255);
-  --main-text: rgba(253, 247, 241, 255);
+  --global-background-color: rgba(248, 252, 242, 0.495);
+  --main-text: #111827;
   --global-font: "Roboto", sans-serif;
+  --card-bg: white;
+  --input-bg-color: #dfdfdf;
+  --input-border-colr: #626b79;
+  --main-color: #b89942;
+  --main-color-hover: #897339;
 }
 
 a {
@@ -51,14 +56,23 @@ a {
 .gradient-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom right, #3b82f6, #a855f7, #ec4899);
-  opacity: 0.2;
+  background: rgb(184, 153, 66);
+  background: linear-gradient(
+    156deg,
+    rgba(184, 153, 66, 1) 4%,
+    rgba(240, 229, 197, 1) 13%,
+    rgba(255, 255, 255, 1) 34%,
+    rgba(255, 255, 255, 1) 61%,
+    rgba(240, 229, 197, 1) 88%,
+    rgba(184, 153, 66, 0.5663515406162465) 96%
+  );
+  opacity: 0.1;
 }
 
 .spinning-pattern {
   position: absolute;
   inset: 0;
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox=%220 0 80 80%22 width=%2280%22 height=%2280%22%3E%3Ccircle cx=%2240%22 cy=%2240%22 r=%2236%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%221%22 stroke-opacity=%22.1%22%2F%3E%3C%2Fsvg%3E");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns=%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22 viewBox=%220 0 80 80%22 width=%2280%22 height=%2280%22%3E%3Ccircle cx=%2240%22 cy=%2240%22 r=%2236%22 fill=%22none%22 stroke=%22%23999999%22 stroke-width=%221%22 stroke-opacity=%22.1%22%2F%3E%3C%2Fsvg%3E");
   background-size: 24px 24px;
   animation: spin 60s linear infinite;
 }
@@ -135,13 +149,13 @@ a {
   border-radius: 10px;
   height: 150px;
   cursor: pointer;
-  color: var(--main-text);
+  color: white;
   height: 160px;
   transition: transform 0.3s ease;
 }
 .button a {
   font-size: 25px;
-  color: var(--main-text);
+  color: white;
   width: 100%;
   height: 100%;
   display: flex;
@@ -149,25 +163,25 @@ a {
   align-items: center;
 }
 .button:hover {
-  background-color: #1a1924 !important;
+  background-color: #80692a !important;
   transform: scale(1.04) !important;
 }
 
 .button.one {
-  background-color: #059669;
+  background-color: #b89942;
   transition: transform 0.3s ease;
 }
 .button.tow {
-  background-color: #2563eb;
+  background-color: #b89942;
   transition: transform 0.3s ease;
 }
 
 .button.three {
-  background-color: #d97706;
+  background-color: #b89942;
   transition: transform 0.3s ease;
 }
 .button.for {
-  background-color: #9333ea;
+  background-color: #b89942;
   transition: transform 0.3s ease;
 }
 
@@ -177,11 +191,11 @@ a {
   align-items: center;
   gap: 10px;
   justify-content: center;
-  background-color: #ef4747;
+  background-color: #b87142;
   padding: 15px 70px;
   border-radius: 10px;
+  color: white;
   cursor: pointer;
-  color: var(--main-text);
   transition: ease 0.6s;
 }
 
@@ -200,19 +214,17 @@ a {
   width: 100%;
   max-width: 950px;
   border-radius: 10px;
-  background: rgb(120, 64, 145);
-  background: linear-gradient(
-    3deg,
-    rgba(120, 64, 145, 1) 10%,
-    rgba(187, 144, 215, 1) 41%,
-    rgba(147, 103, 199, 1) 66%,
-    rgba(181, 143, 217, 1) 81%,
-    rgba(144, 197, 215, 1) 100%
+  background: rgb(184, 153, 66);
+  background: radial-gradient(
+    circle,
+    rgba(184, 153, 66, 1) 0%,
+    rgba(230, 201, 54, 1) 100%
   );
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .event-content {
-  background-color: var(--header-color);
+  background-color: var(--card-bg);
   border-radius: 10px;
   padding: 40px;
   color: var(--main-text);
@@ -230,8 +242,8 @@ a {
 
 .eventNumber input {
   width: 100%;
-  background-color: #374151;
-  border: 1px solid #626b79;
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--input-border-colr);
   border-radius: 10px;
   padding: 18px 15px;
   font-size: 18px;
@@ -258,10 +270,16 @@ a {
   cursor: pointer;
   width: 100%;
   margin-top: 50px;
-  color: var(--main-text);
-  background-color: #1e50da;
+  color: white;
+  background-color: var(--main-color);
   border: 1px solid transparent;
   padding: 18px 0px;
+  transition: ease 0.3s;
+}
+
+.eventBtn:hover {
+  background-color: var(--main-color-hover);
+  transition: ease 0.3s;
 }
 
 .eventBtn i {
@@ -336,8 +354,8 @@ input[type="radio"]:checked::before {
 
 .inquiry-input input {
   width: 100%;
-  background-color: #374151;
-  border: 1px solid #626b79;
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--input-border-colr);
   border-radius: 10px;
   padding: 18px 15px;
   font-size: 18px;
@@ -367,7 +385,7 @@ input::-webkit-inner-spin-button {
 }
 
 .culc-inputs .btn {
-  background: #00000079;
+  background: #604c3879;
   border: 1px solid white;
   display: flex;
   align-items: center;
@@ -379,7 +397,7 @@ input::-webkit-inner-spin-button {
 }
 
 .culc-inputs .btn:hover {
-  background-color: #3b346479;
+  background-color: #645834cf;
   transition: ease 0.3s;
 }
 
@@ -388,25 +406,25 @@ input::-webkit-inner-spin-button {
   padding: 13px 0px;
   border-radius: 10px;
   border: none;
-  color: var(--main-text);
+  color: white;
   font-family: var(--global-font);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: ease 0.3s;
-  background-color: rgb(17, 134, 62);
+  background-color: var(--main-color);
 }
 
 .inquiry-button:hover {
-  background-color: rgb(27, 168, 27);
+  background-color: var(--main-color-hover);
   transition: ease 0.3s;
 }
 
 /* ------------------ Scheduled Registration -----------------------  */
 
 .scheduled {
-  background-color: #6b46c1;
+  background-color: white;
   width: 100%;
   border-radius: 10px;
   padding: 30px;
@@ -424,7 +442,8 @@ input::-webkit-inner-spin-button {
 .scheduled-input input {
   width: 100%;
   border-radius: 10px;
-  border: transparent;
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--input-border-colr);
   padding: 15px 15px;
   text-align: center;
   font-family: var(--global-font);
@@ -438,15 +457,15 @@ input::-webkit-inner-spin-button {
   border-radius: 20px;
   border: none;
   transition: ease 0.3s;
-  background-color: rgb(17, 134, 62);
-  color: var(--main-text);
+  background-color: var(--main-color);
+  color: white;
   font-family: var(--global-font);
   cursor: pointer;
   font-size: 18px;
 }
 
 .scheduled-input button:hover {
-  background-color: rgb(27, 168, 27);
+  background-color: var(--main-color-hover);
   transition: ease 0.3s;
 }
 
@@ -464,9 +483,10 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  background-color: #553c9a;
+  color: white;
+  background-color: var(--main-color);
   padding: 18px 10px;
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid gray;
 }
 
 .scheduled .table .row-content {
@@ -474,7 +494,7 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-between;
   padding: 18px 10px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid gray;
 }
 
 .scheduled .table .row-content h5 {
@@ -507,8 +527,8 @@ input::-webkit-inner-spin-button {
 .new-event-input textarea {
   height: 80px;
   padding: 15px;
-  background-color: #374151;
-  border: 1px solid #626b79;
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--input-border-colr);
   color: var(--main-text);
   border-radius: 10px;
   font-family: var(--global-font);
@@ -530,23 +550,23 @@ input::-webkit-inner-spin-button {
   margin-top: 20px;
   border: transparent;
   border-radius: 10px;
-  color: var(--main-text);
+  color: white;
   padding: 14px 5px;
   font-family: var(--global-font);
   transition: ease 0.3s;
-  background-color: rgb(17, 134, 62);
+  background-color: var(--main-color);
 }
 
 .new-event-button:hover {
-  background-color: rgb(27, 168, 27);
+  background-color: var(--main-color-hover);
   transition: ease 0.3s;
 }
 
 .new-event-form input {
   padding: 14px;
   border-radius: 10px;
-  background-color: #374151;
-  border: 1px solid #626b79;
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--input-border-colr);
   color: var(--main-text);
   font-family: var(--global-font);
 }
@@ -633,20 +653,28 @@ input::-webkit-inner-spin-button {
 .entry-card-print {
   display: flex;
   align-items: center;
+  color: white;
   gap: 10px;
   justify-content: center;
-  background-color: #054996;
+  background-color: var(--main-color);
   width: 100%;
   border-radius: 10px;
   padding: 18px 14px;
   text-align: center;
   cursor: pointer;
+  transition: ease 0.3s;
+}
+
+.entry-card-print:hover {
+  transition: ease 0.3s;
+  background-color: var(--main-color-hover);
 }
 
 .new-registration {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: white;
   justify-content: center;
   background-color: #059669;
   width: 100%;
@@ -654,6 +682,12 @@ input::-webkit-inner-spin-button {
   padding: 18px 14px;
   text-align: center;
   cursor: pointer;
+  transition: ease 0.3s;
+}
+
+.new-registration:hover {
+  transition: ease 0.3s;
+  background-color: #0a7150;
 }
 
 /*------------- Password Page ------------ */
@@ -664,7 +698,7 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  background-color: #192d6b;
+  background-color: white;
   border-radius: 10px;
   padding: 40px;
   color: var(--main-text);
@@ -702,8 +736,8 @@ input::-webkit-inner-spin-button {
   width: 100%;
   padding: 17px 15px;
   border-radius: 10px;
-  border: 1px solid #244fa8;
-  background-color: #183484;
+  border: 1px solid var(--input-border-colr);
+  background-color: var(--input-bg-color);
   color: var(--main-text);
   font-size: 18px;
   font-family: var(--global-font);
@@ -718,9 +752,15 @@ input::-webkit-inner-spin-button {
   padding: 17px 15px;
   border-radius: 10px;
   font-family: var(--global-font);
-  color: var(--main-text);
+  color: white;
   border: 1px solid transparent;
-  background-color: #2563eb;
+  background-color: var(--main-color);
   font-size: 20px;
   cursor: pointer;
+  transition: ease 0.3s;
+}
+
+.password-form button:hover {
+  transition: ease 0.3s;
+  background-color: var(--main-color-hover);
 }
