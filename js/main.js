@@ -7,9 +7,14 @@ function navigateTo(url) {
 }
 // function for going back
 function goBack() {
-  window.history.back();
+  if (document.referrer) {
+    // Navigate to the previous page if there is a referrer (a previous page)
+    window.location.href = document.referrer;
+  } else {
+    // Fallback: use window.history.back() if referrer is not available
+    window.history.back();
+  }
 }
-
 window.addEventListener("load", () => {
   const loader = document.querySelector(".loader");
 
