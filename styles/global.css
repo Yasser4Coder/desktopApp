@@ -650,3 +650,72 @@ input::-webkit-inner-spin-button {
   text-align: center;
   cursor: pointer;
 }
+
+/*------------- Password Page ------------ */
+
+.password-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  background-color: #192d6b;
+  border-radius: 10px;
+  padding: 40px;
+  color: var(--main-text);
+}
+
+.password-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.password-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+.password-text h2 {
+  font-size: 30px;
+}
+
+.password-text h4 {
+  font-weight: 400;
+}
+.password-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.password-form input {
+  width: 100%;
+  padding: 17px 15px;
+  border-radius: 10px;
+  border: 1px solid #244fa8;
+  background-color: #183484;
+  color: var(--main-text);
+  font-size: 18px;
+  font-family: var(--global-font);
+}
+
+.password-form input:focus {
+  outline: none;
+}
+
+.password-form button {
+  width: 100%;
+  padding: 17px 15px;
+  border-radius: 10px;
+  font-family: var(--global-font);
+  color: var(--main-text);
+  border: 1px solid transparent;
+  background-color: #2563eb;
+  font-size: 20px;
+  cursor: pointer;
+}
