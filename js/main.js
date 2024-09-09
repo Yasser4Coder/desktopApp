@@ -10,6 +10,16 @@ function goBack() {
   window.history.back();
 }
 
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("loader-hidden");
+
+  loader.addEventListener("transitionend", () => {
+    document.body.removeChild("loader");
+  });
+});
+
 window.addEventListener("pageshow", function (event) {
   if (event.persisted) {
     window.location.reload();
