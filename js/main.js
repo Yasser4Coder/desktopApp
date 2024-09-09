@@ -8,6 +8,9 @@ function navigateTo(url) {
 // function for going back
 function goBack() {
   window.history.back();
+  window.addEventListener("popstate", function () {
+    window.location.reload();
+  });
 }
 
 //for uncheck the radio
