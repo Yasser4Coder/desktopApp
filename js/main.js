@@ -8,10 +8,13 @@ function navigateTo(url) {
 // function for going back
 function goBack() {
   window.history.back();
-  window.addEventListener("popstate", function () {
-    window.location.reload();
-  });
 }
+
+window.addEventListener("pageshow", function (event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
 
 //for uncheck the radio
 document.querySelectorAll('input[type="radio"]').forEach((radio) => {
