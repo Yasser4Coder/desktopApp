@@ -20,11 +20,11 @@ window.addEventListener("load", () => {
   });
 });
 
-window.addEventListener("pageshow", function (event) {
-  if (event.persisted) {
-    window.location.reload();
-  }
-});
+// window.addEventListener("pageshow", function (event) {
+//   if (event.persisted) {
+//     window.location.reload();
+//   }
+// });
 
 //for uncheck the radio
 document.querySelectorAll('input[type="radio"]').forEach((radio) => {
