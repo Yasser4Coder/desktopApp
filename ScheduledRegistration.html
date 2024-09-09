@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/global.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Scheduled Registration</title>
   </head>
   <body>
@@ -17,8 +14,6 @@
         <div class="spinning-pattern"></div>
       </div>
       <div class="nav-header cont event-header">
-        <i class="ri-close-large-fill"></i>
-        <h1 class="title">التسجيل الجدولي</h1>
         <div class="nav-header cont event-header">
           <div onclick="navigateTo('index.html')" class="goback">
             <svg
@@ -52,7 +47,7 @@
               </g>
             </svg>
           </div>
-          <h1 class="title">سحب معلومات الفعالية</h1>
+          <h1 class="title">التسجيل الجدولي</h1>
           <div class="goback" onclick="goBack()">
             <svg
               width="40px"
@@ -83,7 +78,11 @@
         </div>
       </div>
       <div class="content cont">
-        <div class="gr-background">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="400"
+          class="gr-background"
+        >
           <form class="scheduled">
             <div class="scheduled-input">
               <input type="number" placeholder="الرقم" />
@@ -138,11 +137,27 @@
                 <h5>تم الفوز على طاولة 1</h5>
                 <h5>01/09/2024 05:54:45</h5>
               </div>
+              <div class="row-content">
+                <h5>خطأ</h5>
+                <h5>151926</h5>
+                <h5>تم الفوز على طاولة 1</h5>
+                <h5>01/09/2024 05:54:45</h5>
+              </div>
+              <div class="row-content">
+                <h5>خطأ</h5>
+                <h5>151926</h5>
+                <h5>تم الفوز على طاولة 1</h5>
+                <h5>01/09/2024 05:54:45</h5>
+              </div>
             </div>
           </form>
         </div>
       </div>
     </div>
     <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

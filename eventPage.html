@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/global.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Event</title>
   </head>
   <body>
@@ -17,7 +14,6 @@
         <div class="spinning-pattern"></div>
       </div>
       <div class="nav-header cont event-header">
-        <h1 class="title">صفحة الفعالية</h1>
         <div class="nav-header cont event-header">
           <div onclick="navigateTo('index.html')" class="goback">
             <svg
@@ -51,7 +47,7 @@
               </g>
             </svg>
           </div>
-          <h1 class="title">سحب معلومات الفعالية</h1>
+          <h1 class="title">صفحة الفعالية</h1>
           <div class="goback" onclick="goBack()">
             <svg
               width="40px"
@@ -82,7 +78,11 @@
         </div>
       </div>
       <div class="content cont">
-        <div class="gr-background">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="400"
+          class="gr-background"
+        >
           <div class="event-content plus">
             <div>
               <h2 class="event-title">الفعالية</h2>
@@ -224,5 +224,9 @@
       </div>
     </div>
     <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
