@@ -292,7 +292,6 @@ a {
 
 .eventNumber input::placeholder {
   color: #676873;
-  letter-spacing: 5px;
 }
 
 .eventNumber input:focus {
