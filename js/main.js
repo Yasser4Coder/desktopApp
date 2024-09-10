@@ -25,12 +25,6 @@ window.addEventListener("load", () => {
   });
 });
 
-// window.addEventListener("pageshow", function (event) {
-//   if (event.persisted) {
-//     window.location.reload();
-//   }
-// });
-
 //for uncheck the radio
 document.querySelectorAll('input[type="radio"]').forEach((radio) => {
   radio.addEventListener("mousedown", function (event) {
@@ -53,9 +47,12 @@ document.querySelectorAll('input[type="radio"]').forEach((radio) => {
 });
 
 const setValue = (value) => {
+  // Check if the current value of the input field is "أدخل رقم البطاقة"
   if (document.getElementById("inq").value === "أدخل رقم البطاقة") {
+    // If true, replace the current value with the new 'value'
     document.getElementById("inq").value = value;
   } else {
+    // Otherwise, append the new 'value' to the existing input value
     document.getElementById("inq").value += value;
   }
 };

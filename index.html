@@ -1,61 +1,113 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+  <!-- HTML document setup with language set to Arabic and text direction set to right-to-left -->
+
   <head>
+    <!-- Metadata and external resources -->
     <meta charset="UTF-8" />
+    <!-- Sets the character encoding to UTF-8 for Arabic support -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the website responsive on all screen sizes -->
+
     <link rel="stylesheet" href="./styles/global.css" />
+    <!-- Links to an external CSS stylesheet for global styles -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Links to the AOS (Animate on Scroll) library stylesheet for scroll animations -->
+
     <title>Main</title>
+    <!-- The title of the webpage -->
   </head>
+
   <body>
+    <!-- Page content starts here -->
     <div class="loader"></div>
+    <!-- A loader that will be displayed while the page is loading (currently not styled or functional in this snippet) -->
+
     <div class="container">
+      <!-- A container wrapping the whole page content -->
+
       <div class="background-wrapper">
+        <!-- A background section with some visual elements -->
         <div class="gradient-overlay"></div>
+        <!-- A gradient overlay element, likely for visual effect -->
         <div class="spinning-pattern"></div>
+        <!-- Another visual element, potentially an animated spinning pattern -->
       </div>
+
       <div class="nav-header cont">
+        <!-- Header section for the navigation or title -->
         <h1 class="title">الواجهة الرئيسية</h1>
+        <!-- The main title of the page in Arabic: "Main Interface" -->
       </div>
+
       <div class="content cont">
+        <!-- Main content area -->
+
         <div class="buttons">
+          <!-- A section for buttons, laid out in rows -->
+
           <div class="row-buttons">
+            <!-- First row of buttons -->
+
             <div
               data-aos="fade-left"
               data-aos-duration="1000"
               class="button one"
             >
-              <a onclick="navigateTo('registerNewEvent.html')"
-                >تسجيل فعالية جديدة</a
-              >
+              <!-- A button with AOS animation (fade-left) and 1000ms duration -->
+              <a onclick="navigateTo('registerNewEvent.html')">
+                <!-- Clicking this link will navigate to 'registerNewEvent.html' -->
+                تسجيل فعالية جديدة
+                <!-- Text for the button in Arabic: "Register New Event" -->
+              </a>
             </div>
+
             <div
               data-aos="fade-left"
               data-aos-duration="1000"
               class="button tow"
             >
-              <a onclick="navigateTo('ScheduledRegistration.html')"
-                >التسجيل الجدول</a
-              >
+              <!-- Second button in the same row with AOS animation -->
+              <a onclick="navigateTo('ScheduledRegistration.html')">
+                <!-- Clicking this link will navigate to 'ScheduledRegistration.html' -->
+                التسجيل الجدول
+                <!-- Text for the button in Arabic: "Scheduled Registration" -->
+              </a>
             </div>
           </div>
+
           <div data-aos="fade-left" data-aos-duration="400" class="row-buttons">
+            <!-- Second row of buttons with a faster animation duration (400ms) -->
+
             <div class="button three">
-              <a onclick="navigateTo('eventInformation.html')"
-                >تشغيل الفعالية الحالية</a
-              >
+              <!-- Third button -->
+              <a onclick="navigateTo('eventInformation.html')">
+                <!-- Clicking this link will navigate to 'eventInformation.html' -->
+                تشغيل الفعالية الحالية
+                <!-- Text in Arabic: "Start the Current Event" -->
+              </a>
             </div>
+
             <div
               data-aos="fade-left"
               data-aos-duration="1000"
               class="button for"
             >
-              <a onclick="navigateTo('eventPage.html')">عرض الطباعة</a>
+              <!-- Fourth button -->
+              <a onclick="navigateTo('eventPage.html')">
+                <!-- Clicking this link will navigate to 'eventPage.html' -->
+                عرض الطباعة
+                <!-- Text in Arabic: "Print Preview" -->
+              </a>
             </div>
           </div>
         </div>
+
         <div class="logout-button">
+          <!-- A logout section with an icon and a label -->
+
           <div>
+            <!-- SVG icon for the logout button -->
             <svg
               width="35px"
               height="35px"
@@ -63,39 +115,38 @@
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-              <g
-                id="SVGRepo_tracerCarrier"
+              <!-- SVG path for logout arrow -->
+              <path
+                d="M15 12L2 12M2 12L5.5 9M2 12L5.5 15"
+                stroke="#ffffff"
+                stroke-width="1.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
-
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M15 12L2 12M2 12L5.5 9M2 12L5.5 15"
-                  stroke="#ffffff"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M9.00195 7C9.01406 4.82497 9.11051 3.64706 9.87889 2.87868C10.7576 2 12.1718 2 15.0002 2L16.0002 2C18.8286 2 20.2429 2 21.1215 2.87868C22.0002 3.75736 22.0002 5.17157 22.0002 8L22.0002 16C22.0002 18.8284 22.0002 20.2426 21.1215 21.1213C20.3531 21.8897 19.1752 21.9862 17 21.9983M9.00195 17C9.01406 19.175 9.11051 20.3529 9.87889 21.1213C10.5202 21.7626 11.4467 21.9359 13 21.9827"
-                  stroke="#ffffff"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                />
-              </g>
+              <!-- SVG path for the frame around the logout arrow -->
+              <path
+                d="M9.00195 7C9.01406 4.82497 9.11051 3.64706 9.87889 2.87868C10.7576 2 12.1718 2 15.0002 2L16.0002 2C18.8286 2 20.2429 2 21.1215 2.87868C22.0002 3.75736 22.0002 5.17157 22.0002 8L22.0002 16C22.0002 18.8284 22.0002 20.2426 21.1215 21.1213C20.3531 21.8897 19.1752 21.9862 17 21.9983M9.00195 17C9.01406 19.175 9.11051 20.3529 9.87889 21.1213C10.5202 21.7626 11.4467 21.9359 13 21.9827"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
             </svg>
           </div>
+
           <h2>خروج</h2>
+          <!-- Logout label in Arabic: "Logout" -->
         </div>
       </div>
     </div>
+
+    <!-- External scripts -->
     <script src="./js/main.js"></script>
+    <!-- Main JavaScript file -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- AOS (Animate on Scroll) library for animations -->
     <script>
       AOS.init();
+      <!-- Initialize AOS to activate the scroll animations -->
     </script>
   </body>
 </html>

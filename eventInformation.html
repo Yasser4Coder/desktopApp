@@ -1,21 +1,35 @@
 <!DOCTYPE html>
+<!-- Defines the document type as HTML -->
 <html lang="ar" dir="rtl">
+  <!-- Sets the language to Arabic and text direction to right-to-left -->
   <head>
     <meta charset="UTF-8" />
+    <!-- Sets the character encoding to UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ensures the page is responsive and scales properly on different devices -->
     <link rel="stylesheet" href="./styles/global.css" />
+    <!-- Links to an external CSS stylesheet for global styles -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Links to AOS (Animate on Scroll) CSS library for animations -->
     <title>Event Information</title>
+    <!-- Sets the title of the webpage -->
   </head>
   <body>
     <div class="loader"></div>
+    <!-- A loader element (likely hidden or animated while content loads) -->
     <div class="container">
+      <!-- Container that wraps the main content -->
       <div class="background-wrapper">
+        <!-- Wrapper for the background elements -->
         <div class="gradient-overlay"></div>
+        <!-- A gradient overlay for visual effects -->
         <div class="spinning-pattern"></div>
+        <!-- A spinning pattern element, potentially animated -->
       </div>
       <div class="nav-header cont event-header">
+        <!-- Navigation header for the event information page -->
         <div onclick="navigateTo('index.html')" class="goback">
+          <!-- A button (icon) to navigate back to the index page -->
           <svg
             width="40px"
             height="40px"
@@ -23,15 +37,15 @@
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <!-- SVG (Scalable Vector Graphics) for an icon -->
             <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
             <g
               id="SVGRepo_tracerCarrier"
               stroke-linecap="round"
               stroke-linejoin="round"
             />
-
             <g id="SVGRepo_iconCarrier">
+              <!-- Path elements define the shape of the icon -->
               <path
                 d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5"
                 stroke="#ffffff"
@@ -48,7 +62,9 @@
           </svg>
         </div>
         <h1 class="title">سحب معلومات الفعالية</h1>
+        <!-- Main title of the page, indicating this section is for fetching event information -->
         <div class="goback" onclick="goBack()">
+          <!-- Another button (icon) to go back, possibly a different navigation option -->
           <svg
             width="40px"
             height="40px"
@@ -57,13 +73,11 @@
             fill="none"
           >
             <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
             <g
               id="SVGRepo_tracerCarrier"
               stroke-linecap="round"
               stroke-linejoin="round"
             />
-
             <g id="SVGRepo_iconCarrier">
               <path
                 stroke="#ffffff"
@@ -77,19 +91,25 @@
         </div>
       </div>
       <div class="content cont">
+        <!-- Main content area -->
         <div
           data-aos="fade-right"
           data-aos-duration="1000"
           class="gr-background"
         >
+          <!-- Section with AOS animation for fading right and a gradient background -->
           <div class="event-content">
             <form class="eventForm" action="">
+              <!-- Form for inputting event information -->
               <div class="eventNumber">
                 <h2>رقم الفعالية</h2>
+                <!-- Title for event number field -->
                 <input type="number" placeholder="أدخل رقم الفعالية" />
+                <!-- Input field for entering the event number -->
               </div>
               <div class="displayOptions">
                 <h2>خيارات العرض</h2>
+                <!-- Title for display options section -->
                 <div class="option">
                   <input
                     class="custom-radio"
@@ -98,6 +118,7 @@
                     value="1"
                     name="options"
                   />
+                  <!-- Radio button option to display both buttons -->
                   <label for="option1">عرض الزرين</label>
                 </div>
                 <div class="option">
@@ -106,6 +127,7 @@
                     type="radio"
                     id="display-only-the-print-button"
                   />
+                  <!-- Radio button option to display only the print button -->
                   <label for="display-only-the-print-button"
                     >عرض زر الطباعة فقط</label
                   >
@@ -116,12 +138,14 @@
                     type="radio"
                     id="display-the-new-registration-button"
                   />
+                  <!-- Radio button option to display only the new registration button -->
                   <label for="display-the-new-registration-button"
                     >عرض زر التسجيل الجديد</label
                   >
                 </div>
               </div>
               <button class="eventBtn" type="submit">
+                <!-- Submit button for fetching event information -->
                 <div>
                   <svg
                     width="35px"
@@ -131,13 +155,11 @@
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
                     <g
                       id="SVGRepo_tracerCarrier"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-
                     <g id="SVGRepo_iconCarrier">
                       <path
                         d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
@@ -157,6 +179,7 @@
                   </svg>
                 </div>
                 <h2>تحميل معلومات الفعالية</h2>
+                <!-- Text inside the button, meaning "Load Event Information" -->
               </button>
             </form>
           </div>
@@ -164,9 +187,12 @@
       </div>
     </div>
     <script src="./js/main.js"></script>
+    <!-- Links to an external JavaScript file for custom functionality -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Links to AOS (Animate on Scroll) JavaScript library for animations -->
     <script>
       AOS.init();
+      <!-- Initializes AOS animations -->
     </script>
   </body>
 </html>
