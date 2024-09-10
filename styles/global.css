@@ -1,5 +1,5 @@
 /* Global */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif !important;
+  font-family: "Alexandria", sans-serif !important;
 }
 
 :root {
@@ -15,7 +15,7 @@ body {
   --header-text: rgba(235, 236, 239, 255);
   --global-background-color: rgba(248, 252, 242, 0.495);
   --main-text: #111827;
-  --global-font: "Roboto", sans-serif;
+  --global-font: "Alexandria", sans-serif;
   --card-bg: white;
   --input-bg-color: #dfdfdf;
   --input-border-colr: #626b79;
@@ -401,7 +401,6 @@ input[type="radio"]:checked::before {
   font-size: 18px;
   color: var(--main-text);
   text-align: center;
-  letter-spacing: 3px;
 }
 
 .inquiry-input input::placeholder {
@@ -616,10 +615,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* ------------------- Event Page --------------- */
-
-.event-title {
-  letter-spacing: 3px;
-}
 
 .plus {
   display: flex;

@@ -67,6 +67,7 @@ const clearInput = () => {
 
 const EnterInquiry = () => {
   document.getElementById("inq").style.color = "gray";
+
   setTimeout(() => {
     window.location.reload();
   }, 1000);
