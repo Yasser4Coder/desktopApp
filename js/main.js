@@ -66,9 +66,18 @@ const clearInput = () => {
 };
 
 const EnterInquiry = () => {
-  document.getElementById("inq").style.color = "gray";
+  const inputElement = document.getElementById("inq");
 
-  setTimeout(() => {
-    window.location.reload();
-  }, 1000);
+  // Change text color to gray
+  inputElement.style.color = "gray";
+
+  // Store the entered value
+  const selectedNumber = inputElement.value;
+
+  // Clear the input field
+  inputElement.value = "";
+
+  // Set the placeholder to the previously entered value
+  inputElement.placeholder = selectedNumber;
+  inputElement.style.color = "black";
 };
